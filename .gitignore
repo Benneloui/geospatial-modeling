@@ -23,6 +23,7 @@ paper/
 *.gpkg
 
 # Ignore tool-specific + OS files
+*.here
 .Rhistory
 .RData
 .Rproj.user/
