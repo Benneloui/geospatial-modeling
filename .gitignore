@@ -1,0 +1,41 @@
+# Ignore data and results folders
+data/
+gadm/
+output/
+paper/
+
+# Ignore geospatial and binary files
+*.tif
+*.tiff
+*.aux
+*.ovr
+*.lock
+*.zip
+*.nc
+*.grib
+*.asc
+*.geojson
+*.shp
+*.gdb
+*.dbf
+*.prj
+*.shx
+*.gpkg
+
+# Ignore tool-specific + OS files
+.Rhistory
+.RData
+.Rproj.user/
+.vscode/
+*.DS_Store
+*.icloud
+*.code-workspace
+
+# Ignore secrets
+.env
+*.sqlite
+
+# Force-include important files
+!scripts/
+!config.yml
+!README.md

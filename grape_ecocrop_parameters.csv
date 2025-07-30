@@ -1,0 +1,5 @@
+"parameter","description","min_abs","min_opt","max_opt","max_abs"
+"ktmp","Killing Temperature (°C)",-1,1,Inf,Inf
+"tavg","Average Temperature (°C)",10,18,30,38
+"prec","Precipitation (mm)",49,91,128,195
+"ph","Soil pH",4.5,5.5,7.5,8.5

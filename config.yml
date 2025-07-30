@@ -1,0 +1,61 @@
+# Target configuration
+country: CHE       # ISO country code (e.g., CH for Switzerland)
+crop: grape        # Target crop or species
+
+
+# Data folder structure
+data_dir: data
+proc_dir: output
+
+# Boundary settings
+boundary_source: local    # Options: "geoboundaries" or "local"
+boundary_file: boundaries/country_boundary.geojson   # Only used if boundary_source is "local"
+
+# Elevation settings
+elevation_file: elevation/SRTM_CH.tif
+
+# Crop data (optional)
+crop_data:
+  path: crops/vineyards     # Folder inside data_dir
+  filename: HL_Rebbau_2023_Zusammenfassung_merged.gdb   # File of crop presence
+
+# Environmental data
+environmental:
+  derive_slope: true
+  derive_aspect: true
+  irrigation_layer: "data/landuse/irrigation_LGRIP30_2015_N40E00_001_2023014175240.tif"  # Percentage irrigated area (0-100%), source: GMIA
+  soil_ph_raster: "data/soil/soil_ph.tif"  # Soil pH (H2O) from ISRIC SoilGrids at 0-5 cm depth
+  soil_data:
+    source: "SoilGrids"  # Global gridded soil dataset from ISRIC (~250 m)
+    ph_pattern: "data/soil/SoilGrids/phh2o_{depth}.tif"  # Soil pH by depth layer
+solar_radiation: "data/solar_radiation/solar_radiation.tif"
+
+# Climate data
+climate:
+  scenario: ssp370
+  bioclimatic_vars:
+    - bio1   # Annual Mean Temperature
+    - bio2   # Mean Diurnal Temperature Range
+    - bio5   # Max Temperature of Warmest Month
+    - bio6   # Min Temperature of Coldest Month
+    - bio12  # Annual Precipitation
+    - bio15  # Precipitation Seasonality (Coefficient of Variation)
+
+  monthly_vars:
+    - pr
+    - rsds
+    - tas
+    - tasmax
+    - tasmin
+
+  # Ecocrop suitability model parameters
+  ecocrop:
+    model_file: "data/models/ecocrop_vine.yml"  # Path to Ecocrop parameters for grape
+
+  # File patterns for bioclimatic variables (single-file)
+  bioclim_current_pattern: "data/climate/current/bio/CHELSA_{var}_1981-2010_V.2.1.tif"
+  bioclim_future_pattern:  "data/climate/future/bio/CHELSA_{var}_2071-2100_mpi-esm1-2-hr_{scenario}_V.2.1.tif"
+
+  # File patterns for monthly variables (01–12)
+  monthly_current_pattern: "data/climate/current/{var}/CHELSA_{var}_{month}_1981-2010_V.2.1.tif"
+  monthly_future_pattern:  "data/climate/future/{var}/CHELSA_{var}_{month}_2071-2100_mpi-esm1-2-hr_{scenario}_V.2.1.tif"

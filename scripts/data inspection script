@@ -1,0 +1,40 @@
+library(terra)
+library(sf)
+library(glue)
+library(geodata)
+library(dplyr)
+library(tmap)
+
+ # ---- Vineyard inspection workflow for HLreb_Zusammenfassung_merged layer ----
+inspect_vineyard_data <- function(gdb_path = "data/crops/vineyards/vineyards_simplified.gpkg", sample_size = 20) {
+  cat("Reading vineyard data...\n")
+  data <- st_read(gdb_path, quiet = TRUE)
+  cat("Dataset info:\n")
+  cat("- Records:", nrow(data), "\n")
+  cat("- CRS:", st_crs(data)$input, "\n")
+  cat("- Geometry type:", unique(st_geometry_type(data)), "\n")
+  cat("- Columns:", paste(names(data), collapse = ", "), "\n\n")
+  bbox <- st_bbox(data)
+  cat("Bounding box:\n")
+  print(bbox)
+  # Remove empty or invalid geometries
+  valid_data <- data[!st_is_empty(data), ]
+  valid_data <- valid_data[st_is_valid(valid_data), ]
+  sample_data <- dplyr::slice_sample(valid_data, n = min(sample_size, nrow(valid_data)))
+  coords <- st_coordinates(st_centroid(sample_data))
+  csv_data <- data.frame(
+    lon = coords[,1],
+    lat = coords[,2],
+    presence = 1
+  )
+  return(list(
+    full_data = data,
+    sample_data = sample_data,
+    csv_data = csv_data
+  ))
+}
+
+# Usage
+result <- inspect_vineyard_data(sample_size = 50)
+write.csv(result$csv_data, "vineyard_inspection.csv", row.names = FALSE)
+
