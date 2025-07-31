@@ -1,3 +1,133 @@
+# Climate data files listing
+climate_files:
+  current:
+    bio:
+      - CHELSA_ai_1981-2010_V.2.1_CHE.tif  # Aridity Index [ai]
+      - CHELSA_bio10_1981-2010_V.2.1_CHE.tif  # Mean Temperature of Warmest Quarter [bio10]
+      - CHELSA_bio11_1981-2010_V.2.1_CHE.tif  # Mean Temperature of Coldest Quarter [bio11]
+      - CHELSA_bio12_1981-2010_V.2.1_CHE.tif  # Annual Precipitation [bio12]
+      - CHELSA_bio13_1981-2010_V.2.1_CHE.tif  # Precipitation of Wettest Month [bio13]
+      - CHELSA_bio14_1981-2010_V.2.1_CHE.tif  # Precipitation of Driest Month [bio14]
+      - CHELSA_bio15_1981-2010_V.2.1_CHE.tif  # Precipitation Seasonality [bio15]
+      - CHELSA_bio16_1981-2010_V.2.1_CHE.tif  # Precipitation of Wettest Quarter [bio16]
+      - CHELSA_bio17_1981-2010_V.2.1_CHE.tif  # Precipitation of Driest Quarter [bio17]
+      - CHELSA_bio18_1981-2010_V.2.1_CHE.tif  # Precipitation of Warmest Quarter [bio18]
+      - CHELSA_bio19_1981-2010_V.2.1_CHE.tif  # Precipitation of Coldest Quarter [bio19]
+      - CHELSA_bio1_1981-2010_V.2.1_CHE.tif  # Annual Mean Temperature [bio1]
+      - CHELSA_bio2_1981-2010_V.2.1_CHE.tif  # Mean Diurnal Range [bio2]
+      - CHELSA_bio3_1981-2010_V.2.1_CHE.tif  # Isothermality [bio3]
+      - CHELSA_bio4_1981-2010_V.2.1_CHE.tif  # Temperature Seasonality [bio4]
+      - CHELSA_bio5_1981-2010_V.2.1_CHE.tif  # Max Temperature of Warmest Month [bio5]
+      - CHELSA_bio6_1981-2010_V.2.1_CHE.tif  # Min Temperature of Coldest Month [bio6]
+      - CHELSA_bio7_1981-2010_V.2.1_CHE.tif  # Temperature Annual Range [bio7]
+      - CHELSA_bio8_1981-2010_V.2.1_CHE.tif  # Mean Temperature of Wettest Quarter [bio8]
+      - CHELSA_bio9_1981-2010_V.2.1_CHE.tif  # Mean Temperature of Driest Quarter [bio9]
+      - CHELSA_clt_max_1981-2010_V.2.1_CHE.tif  # Cloud Cover Max [clt_max]
+      - CHELSA_clt_mean_1981-2010_V.2.1_CHE.tif  # Cloud Cover Mean [clt_mean]
+      - CHELSA_clt_min_1981-2010_V.2.1_CHE.tif  # Cloud Cover Min [clt_min]
+      - CHELSA_clt_range_1981-2010_V.2.1_CHE.tif  # Cloud Cover Range [clt_range]
+      - CHELSA_cmi_max_1981-2010_V.2.1_CHE.tif  # Climate Moisture Index Max [cmi_max]
+      - CHELSA_cmi_mean_1981-2010_V.2.1_CHE.tif  # Climate Moisture Index Mean [cmi_mean]
+      - CHELSA_cmi_min_1981-2010_V.2.1_CHE.tif  # Climate Moisture Index Min [cmi_min]
+      - CHELSA_cmi_range_1981-2010_V.2.1_CHE.tif  # Climate Moisture Index Range [cmi_range]
+      - CHELSA_fcf_1981-2010_V.2.1_CHE.tif  # Frost Days [fcf]
+      - CHELSA_fgd_1981-2010_V.2.1_CHE.tif  # Growing Degree Days [fgd]
+      - CHELSA_gdd0_1981-2010_V.2.1_CHE.tif  # Growing Degree Days 0°C [gdd0]
+      - CHELSA_gdd10_1981-2010_V.2.1_CHE.tif  # Growing Degree Days 10°C [gdd10]
+      - CHELSA_gdd5_1981-2010_V.2.1_CHE.tif  # Growing Degree Days 5°C [gdd5]
+      - CHELSA_gddlgd0_1981-2010_V.2.1_CHE.tif  # Lag Growing Degree Days 0°C [gddlgd0]
+      - CHELSA_gddlgd10_1981-2010_V.2.1_CHE.tif  # Lag Growing Degree Days 10°C [gddlgd10]
+      - CHELSA_gddlgd5_1981-2010_V.2.1_CHE.tif  # Lag Growing Degree Days 5°C [gddlgd5]
+      - CHELSA_gdgfgd0_1981-2010_V.2.1_CHE.tif  # Growing Degree Days Frost [gdgfgd0]
+      - CHELSA_gdgfgd10_1981-2010_V.2.1_CHE.tif  # Growing Degree Days Frost 10°C [gdgfgd10]
+      - CHELSA_gdgfgd5_1981-2010_V.2.1_CHE.tif  # Growing Degree Days Frost 5°C [gdgfgd5]
+      - CHELSA_gsl_1981-2010_V.2.1_CHE.tif  # Growing Season Length [gsl]
+      - CHELSA_gsp_1981-2010_V.2.1_CHE.tif  # Growing Season Precipitation [gsp]
+      - CHELSA_gst_1981-2010_V.2.1_CHE.tif  # Growing Season Temperature [gst]
+      - CHELSA_kg0_1981-2010_V.2.1_CHE.tif  # Köppen-Geiger Zone 0 [kg0]
+      - CHELSA_kg1_1981-2010_V.2.1_CHE.tif  # Köppen-Geiger Zone 1 [kg1]
+      - CHELSA_kg2_1981-2010_V.2.1_CHE.tif  # Köppen-Geiger Zone 2 [kg2]
+      - CHELSA_kg3_1981-2010_V.2.1_CHE.tif  # Köppen-Geiger Zone 3 [kg3]
+      - CHELSA_kg4_1981-2010_V.2.1_CHE.tif  # Köppen-Geiger Zone 4 [kg4]
+      - CHELSA_kg5_1981-2010_V.2.1_CHE.tif  # Köppen-Geiger Zone 5 [kg5]
+      - CHELSA_lgd_1981-2010_V.2.1_CHE.tif  # Length of Growing Season [lgd]
+      - CHELSA_ngd0_1981-2010_V.2.1_CHE.tif  # Number of Growing Days 0°C [ngd0]
+      - CHELSA_ngd10_1981-2010_V.2.1_CHE.tif  # Number of Growing Days 10°C [ngd10]
+      - CHELSA_ngd5_1981-2010_V.2.1_CHE.tif  # Number of Growing Days 5°C [ngd5]
+      - CHELSA_npp_1981-2010_V.2.1_CHE.tif  # Net Primary Productivity [npp]
+      - CHELSA_scd_1981-2010_V.2.1_CHE.tif  # Snow Cover Duration [scd]
+      - CHELSA_swe_1981-2010_V.2.1_CHE.tif  # Snow Water Equivalent [swe]
+      - CHELSA_pet_penman_max_1981-2010_V.2.1_CHE.tif  # Max Potential Evapotranspiration (Penman) [pet_penman_max]
+      - CHELSA_pet_penman_mean_1981-2010_V.2.1_CHE.tif  # Mean Potential Evapotranspiration (Penman) [pet_penman_mean]
+      - CHELSA_pet_penman_min_1981-2010_V.2.1_CHE.tif  # Min Potential Evapotranspiration (Penman) [pet_penman_min]
+      - CHELSA_pet_penman_range_1981-2010_V.2.1_CHE.tif  # Range of Potential Evapotranspiration (Penman) [pet_penman_range]
+      - CHELSA_rsds_1981-2010_max_V.2.1_CHE.tif  # Max Surface Solar Radiation [rsds_max]
+      - CHELSA_rsds_1981-2010_mean_V.2.1_CHE.tif  # Mean Surface Solar Radiation [rsds_mean]
+      - CHELSA_rsds_1981-2010_min_V.2.1_CHE.tif  # Min Surface Solar Radiation [rsds_min]
+      - CHELSA_rsds_1981-2010_range_V.2.1_CHE.tif  # Range of Surface Solar Radiation [rsds_range]
+      - CHELSA_scd_1981-2010_V.2.1_CHE.tif  # Snow Cover Duration [scd]
+      - CHELSA_sfcWind_max_1981-2010_V.2.1_CHE.tif  # Max Surface Wind Speed [sfcWind_max]
+      - CHELSA_sfcWind_mean_1981-2010_V.2.1_CHE.tif  # Mean Surface Wind Speed [sfcWind_mean]
+      - CHELSA_sfcWind_min_1981-2010_V.2.1_CHE.tif  # Min Surface Wind Speed [sfcWind_min]
+      - CHELSA_sfcWind_range_1981-2010_V.2.1_CHE.tif  # Range of Surface Wind Speed [sfcWind_range]
+      - CHELSA_swb_1981-2010_V.2.1_CHE.tif  # Soil Water Balance [swb]
+      - CHELSA_swe_1981-2010_V.2.1_CHE.tif  # Snow Water Equivalent [swe]
+      - CHELSA_vpd_max_1981-2010_V.2.1_CHE.tif  # Max Vapor Pressure Deficit [vpd_max]
+      - CHELSA_vpd_mean_1981-2010_V.2.1_CHE.tif  # Mean Vapor Pressure Deficit [vpd_mean]
+      - CHELSA_vpd_min_1981-2010_V.2.1_CHE.tif  # Min Vapor Pressure Deficit [vpd_min]
+      - CHELSA_vpd_range_1981-2010_V.2.1_CHE.tif  # Range of Vapor Pressure Deficit [vpd_range]
+
+    pr:
+      - CHELSA_pr_01_1981-2010_V.2.1.tif  # Precipitation January [pr01]
+    tas:
+      - CHELSA_tas_01_1981-2010_V.2.1_CHE.tif  # Mean Temperature January [tas01]
+    tasmax:
+      - CHELSA_tasmax_01_1981-2010_V.2.1_CHE.tif  # Max Temperature January [tasmax01]
+    tasmin:
+      - CHELSA_tasmin_01_1981-2010_V.2.1_CHE.tif  # Min Temperature January [tasmin01]
+  future:
+    bio:
+      - CHELSA_bio5_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1.tif  # Max Temperature of Warmest Month [bio5]
+      - CHELSA_bio6_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Min Temperature of Coldest Month [bio6]
+      - CHELSA_bio7_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1.tif  # Temperature Annual Range [bio7]
+      - CHELSA_bio8_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Mean Temperature of Wettest Quarter [bio8]
+      - CHELSA_bio9_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1.tif  # Mean Temperature of Driest Quarter [bio9]
+      - CHELSA_fcf_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Frost Days [fcf]
+      - CHELSA_fgd_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Degree Days [fgd]
+      - CHELSA_gdd0_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Degree Days 0°C [gdd0]
+      - CHELSA_gdd10_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Degree Days 10°C [gdd10]
+      - CHELSA_gdd5_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Degree Days 5°C [gdd5]
+      - CHELSA_gddlgd0_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Lag Growing Degree Days 0°C [gddlgd0]
+      - CHELSA_gddlgd10_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1.tif  # Lag Growing Degree Days 10°C [gddlgd10]
+      - CHELSA_gddlgd5_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Lag Growing Degree Days 5°C [gddlgd5]
+      - CHELSA_gdgfgd0_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Degree Days Frost [gdgfgd0]
+      - CHELSA_gdgfgd10_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Degree Days Frost 10°C [gdgfgd10]
+      - CHELSA_gdgfgd5_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Degree Days Frost 5°C [gdgfgd5]
+      - CHELSA_gsl_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Season Length [gsl]
+      - CHELSA_gsp_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Season Precipitation [gsp]
+      - CHELSA_gst_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Growing Season Temperature [gst]
+      - CHELSA_kg0_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Köppen-Geiger Zone 0 [kg0]
+      - CHELSA_kg1_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Köppen-Geiger Zone 1 [kg1]
+      - CHELSA_kg2_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Köppen-Geiger Zone 2 [kg2]
+      - CHELSA_kg3_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Köppen-Geiger Zone 3 [kg3]
+      - CHELSA_kg4_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Köppen-Geiger Zone 4 [kg4]
+      - CHELSA_kg5_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Köppen-Geiger Zone 5 [kg5]
+      - CHELSA_lgd_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Length of Growing Season [lgd]
+      - CHELSA_ngd0_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Number of Growing Days 0°C [ngd0]
+      - CHELSA_ngd10_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1.tif  # Number of Growing Days 10°C [ngd10]
+      - CHELSA_ngd5_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Number of Growing Days 5°C [ngd5]
+      - CHELSA_npp_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Net Primary Productivity [npp]
+      - CHELSA_scd_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Snow Cover Duration [scd]
+      - CHELSA_swe_2071-2100_mpi-esm1-2-hr_ssp370_V.2.1_CHE.tif  # Snow Water Equivalent [swe]
+    pr:
+      - CHELSA_mpi-esm1-2-hr_r1i1p1f1_w5e5_ssp370_pr_01_2071_2100_norm_CHE.tif  # Precipitation January [pr01]
+    tas:
+      - CHELSA_mpi-esm1-2-hr_r1i1p1f1_w5e5_ssp370_tas_01_2071_2100_norm_CHE.tif  # Mean Temperature January [tas01]
+    tasmax:
+      - CHELSA_mpi-esm1-2-hr_r1i1p1f1_w5e5_ssp370_tasmax_01_2071_2100_norm_CHE.tif  # Max Temperature January [tasmax01]
+    tasmin:
+      - CHELSA_mpi-esm1-2-hr_r1i1p1f1_w5e5_ssp370_tasmin_01_2071_2100_norm_CHE.tif  # Min Temperature January [tasmin01]
+
 # Target configuration
 country: CHE       # ISO country code (e.g., CH for Switzerland)
 crop: grape        # Target crop or species
@@ -12,7 +142,7 @@ boundary_source: local    # Options: "geoboundaries" or "local"
 boundary_file: boundaries/country_boundary.geojson   # Only used if boundary_source is "local"
 
 # Elevation settings
-elevation_file: elevation/SRTM_CH.tif
+elevation_file: elevation/elevation_swiss.tif
 
 # Crop data (optional)
 crop_data:
@@ -23,39 +153,11 @@ crop_data:
 environmental:
   derive_slope: true
   derive_aspect: true
-  irrigation_layer: "data/landuse/irrigation_LGRIP30_2015_N40E00_001_2023014175240.tif"  # Percentage irrigated area (0-100%), source: GMIA
-  soil_ph_raster: "data/soil/soil_ph.tif"  # Soil pH (H2O) from ISRIC SoilGrids at 0-5 cm depth
-  soil_data:
-    source: "SoilGrids"  # Global gridded soil dataset from ISRIC (~250 m)
-    ph_pattern: "data/soil/SoilGrids/phh2o_{depth}.tif"  # Soil pH by depth layer
-solar_radiation: "data/solar_radiation/solar_radiation.tif"
-
-# Climate data
-climate:
-  scenario: ssp370
-  bioclimatic_vars:
-    - bio1   # Annual Mean Temperature
-    - bio2   # Mean Diurnal Temperature Range
-    - bio5   # Max Temperature of Warmest Month
-    - bio6   # Min Temperature of Coldest Month
-    - bio12  # Annual Precipitation
-    - bio15  # Precipitation Seasonality (Coefficient of Variation)
-
-  monthly_vars:
-    - pr
-    - rsds
-    - tas
-    - tasmax
-    - tasmin
-
-  # Ecocrop suitability model parameters
+  irrigation_layer: "data/landuse/irrigation_LGRIP30_2015_N40E00_001_2023014175240_CHE.tif"  # Percentage irrigated area (0-100%), source: GMIA
+  soil_ph_raster: "data/soil/phh2o_0-5cm_mean_CHE.tif"  # Soil pH (H2O) from ISRIC SoilGrids at 0-5 cm depth
   ecocrop:
     model_file: "data/models/ecocrop_vine.yml"  # Path to Ecocrop parameters for grape
-
-  # File patterns for bioclimatic variables (single-file)
   bioclim_current_pattern: "data/climate/current/bio/CHELSA_{var}_1981-2010_V.2.1.tif"
-  bioclim_future_pattern:  "data/climate/future/bio/CHELSA_{var}_2071-2100_mpi-esm1-2-hr_{scenario}_V.2.1.tif"
-
-  # File patterns for monthly variables (01–12)
+  bioclim_future_pattern: "data/climate/future/bio/CHELSA_{var}_2071-2100_mpi-esm1-2-hr_{scenario}_V.2.1.tif"
   monthly_current_pattern: "data/climate/current/{var}/CHELSA_{var}_{month}_1981-2010_V.2.1.tif"
-  monthly_future_pattern:  "data/climate/future/{var}/CHELSA_{var}_{month}_2071-2100_mpi-esm1-2-hr_{scenario}_V.2.1.tif"
+  monthly_future_pattern: "data/climate/future/{var}/CHELSA_{var}_{month}_2071-2100_mpi-esm1-2-hr_{scenario}_V.2.1.tif"

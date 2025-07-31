@@ -6,7 +6,7 @@ library(sf)
 # Read project config to get country code (requires yaml package)
 library(yaml)
 config <- yaml::read_yaml(here("config.yml"))
-country_code <- config$country  # e.g. "CH"
+country_code <- config$country # e.g. "CH"
 
 
 # Directly reference the local country boundary GeoJSON
@@ -31,44 +31,44 @@ depths <- c("0-5cm", "5-15cm", "15-30cm", "30-60cm", "60-100cm", "100-200cm")
 metrics <- c("mean", "Q0.05", "Q0.5", "Q0.95", "uncertainty")
 
 # Choose first depth and metric for initial download
-depth <- depths[1]   # "0-5cm"
-metric <- "mean"    # "mean"
+depth <- depths[1] # "0-5cm"
+metric <- "mean" # "mean"
 
 # Construct the coverage layer name dynamically
-voi_layer <- paste(voi, depth, metric, sep = "_")  # e.g., "phh2o_0-5cm_mean"
+voi_layer <- paste(voi, depth, metric, sep = "_") # e.g., "phh2o_0-5cm_mean"
 
 # Path to the WCS. See maps.isric.org
-wcs_path = paste0("https://maps.isric.org/mapserv?map=/map/",voi,".map")
-wcs_service = "SERVICE=WCS"
-wcs_version = "VERSION=2.0.1" # This works for gdal >=2.3; "VERSION=1.1.1" works with gdal < 2.3.
+wcs_path <- paste0("https://maps.isric.org/mapserv?map=/map/", voi, ".map")
+wcs_service <- "SERVICE=WCS"
+wcs_version <- "VERSION=2.0.1" # This works for gdal >=2.3; "VERSION=1.1.1" works with gdal < 2.3.
 
 # Define region of interest bounding box (minX, maxY, maxX, minY) and SRS
 # bb is now defined from shapefile above
-projwin_srs <- "EPSG:4326"     # coordinate reference system for projwin
+projwin_srs <- "EPSG:4326" # coordinate reference system for projwin
 
 # Example 1: Describe the coverage layer
-wcs_request = "DescribeCoverage" 
+wcs_request <- "DescribeCoverage"
 
-wcs = paste(wcs_path, wcs_service, wcs_version, wcs_request, sep="&")
+wcs <- paste(wcs_path, wcs_service, wcs_version, wcs_request, sep = "&")
 
 # we create a XML that can be used with the gdalinfo utility after being saved to disk:
 l1 <- newXMLNode("WCS_GDAL")
-l1.s <- newXMLNode("ServiceURL", wcs, parent=l1)
-l1.l <- newXMLNode("CoverageName", voi_layer, parent=l1)
+l1.s <- newXMLNode("ServiceURL", wcs, parent = l1)
+l1.l <- newXMLNode("CoverageName", voi_layer, parent = l1)
 
 # Save to local disk
-xml.out = "./sg.xml"
+xml.out <- "./sg.xml"
 saveXML(l1, file = xml.out)
 
 # Example 2: Download a Tiff for a region of interest (ROI)
-wcs = paste(wcs_path,wcs_service,wcs_version,sep="&") # This works for gdal >= 2.3
+wcs <- paste(wcs_path, wcs_service, wcs_version, sep = "&") # This works for gdal >= 2.3
 
 l1 <- newXMLNode("WCS_GDAL")
-l1.s <- newXMLNode("ServiceURL", wcs, parent=l1)
-l1.l <- newXMLNode("CoverageName", voi_layer, parent=l1)
+l1.s <- newXMLNode("ServiceURL", wcs, parent = l1)
+l1.l <- newXMLNode("CoverageName", voi_layer, parent = l1)
 
 # Save to local disk
-xml.out = "./sg.xml"
+xml.out <- "./sg.xml"
 saveXML(l1, file = xml.out)
 
 # Define output filename based on layer name
@@ -77,10 +77,10 @@ file.out <- here::here("output/rasters", paste0(voi_layer, ".tif"))
 
 # Download raster as GeoTIFF (Warning: it can be large!)
 sf::gdal_utils(
-  util        = "translate",
-  source      = xml.out,
+  util = "translate",
+  source = xml.out,
   destination = file.out,
-  options     = c(
+  options = c(
     "-tr", "250", "250",
     "-projwin", bb[1], bb[2], bb[3], bb[4],
     "-projwin_srs", projwin_srs,
@@ -93,10 +93,10 @@ sf::gdal_utils(
 # Clip to country shapefile boundary
 cropped <- here::here("output/rasters", paste0(voi_layer, "_", country_code, ".tif"))
 sf::gdal_utils(
-  util        = "warp",
-  source      = file.out,
+  util = "warp",
+  source = file.out,
   destination = cropped,
-  options     = c(
+  options = c(
     "-cutline", shp_path,
     "-crop_to_cutline",
     "-co", "TILED=YES", "-co", "COMPRESS=DEFLATE",

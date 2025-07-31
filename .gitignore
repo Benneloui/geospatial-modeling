@@ -23,7 +23,6 @@ paper/
 *.gpkg
 
 # Ignore tool-specific + OS files
-*.here
 .Rhistory
 .RData
 .Rproj.user/
@@ -35,6 +34,7 @@ paper/
 # Ignore secrets
 .env
 *.sqlite
+*.here
 
 # Force-include important files
 !scripts/
